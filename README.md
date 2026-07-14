@@ -3,7 +3,7 @@
 A small, calm web app for picking up Morse code — one letter at a time, in
 English or Turkish.
 
-Live at **https://oze05607.github.io/learnmorse/** once GitHub Pages is turned on for this repo.
+Live at **https://en970.github.io/learnmorse/** once GitHub Pages is turned on for this repo.
 
 ## How it teaches
 

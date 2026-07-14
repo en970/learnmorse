@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "A calm way to learn Morse code, one letter at a time, in English or Turkish.",
-  "homepage": "https://oze05607.github.io/learnmorse/",
+  "homepage": "https://en970.github.io/learnmorse/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oze05607/learnmorse.git"
+    "url": "https://github.com/en970/learnmorse.git"
   },
   "license": "MIT",
   "scripts": {
