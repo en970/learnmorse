@@ -13,13 +13,15 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fbf1e9" },
-    { media: "(prefers-color-scheme: dark)", color: "#221b16" },
+    { media: "(prefers-color-scheme: light)", color: "#fdf8f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#23201c" },
   ],
 };
 
 // Applies the learner's saved palette/theme/language before first paint,
 // so returning visitors don't see a flash of the default look.
+const KNOWN_PALETTES = ["peach-pine", "dawn-coral", "harbor-teal", "soft-sunset"];
+
 const THEME_INIT_SCRIPT = `
 (function() {
   try {
@@ -27,7 +29,8 @@ const THEME_INIT_SCRIPT = `
     if (!raw) return;
     var s = JSON.parse(raw);
     var root = document.documentElement;
-    if (s.palette) root.setAttribute('data-palette', s.palette);
+    var known = ${JSON.stringify(KNOWN_PALETTES)};
+    if (s.palette && known.indexOf(s.palette) !== -1) root.setAttribute('data-palette', s.palette);
     if (s.language) root.lang = s.language;
     if (s.theme && s.theme !== 'auto') root.setAttribute('data-theme', s.theme);
   } catch (e) {}

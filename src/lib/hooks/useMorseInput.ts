@@ -11,6 +11,8 @@ export interface UseMorseInputOptions {
   singleSwitch: boolean;
   singleSwitchHoldMs: number;
   onActivity?: () => void;
+  /** Fired the moment a dot or dash is added, for optional key-tap tones. */
+  onSymbol?: (symbol: "." | "-") => void;
 }
 
 export interface MorseInputHandle {
@@ -43,6 +45,7 @@ export function useMorseInput({
   singleSwitch,
   singleSwitchHoldMs,
   onActivity,
+  onSymbol,
 }: UseMorseInputOptions): MorseInputHandle {
   const [buffer, setBuffer] = useState("");
   const confirmTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -69,13 +72,14 @@ export function useMorseInput({
     (symbol: "." | "-") => {
       if (!enabled) return;
       onActivity?.();
+      onSymbol?.(symbol);
       setBuffer((prev) => {
         const next = prev + symbol;
         if (singleSwitch) scheduleAutoConfirm(next);
         return next;
       });
     },
-    [enabled, singleSwitch, scheduleAutoConfirm, onActivity],
+    [enabled, singleSwitch, scheduleAutoConfirm, onActivity, onSymbol],
   );
 
   const addDot = useCallback(() => addSymbol("."), [addSymbol]);

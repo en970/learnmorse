@@ -77,6 +77,13 @@ export function ReviewMode({
     enabled: phase === "playing" && feedback === null,
     singleSwitch,
     singleSwitchHoldMs,
+    onSymbol: (symbol) => {
+      if (!soundEnabled) return;
+      const audio = getMorseAudio();
+      audio.setEnabled(true);
+      if (symbol === "-") audio.playDah();
+      else audio.playDit();
+    },
   });
 
   const start = () => {

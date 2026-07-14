@@ -18,284 +18,234 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/*
+  Lighter, airier pass: less saturated surfaces, softer accents, more
+  breathing room between background and card colors — warm without
+  feeling closed-in.
+*/
+
 /* ---------- Peach & Pine (default) ---------- */
 [data-palette="peach-pine"] {
-  --bg: #fbf1e9;
+  --bg: #fdf8f3;
   --surface: #ffffff;
-  --surface-2: #f3e1d4;
-  --text: #362b24;
-  --text-dim: #957e6c;
-  --accent: #dd8862;
+  --surface-2: #fbefe4;
+  --text: #4a3b32;
+  --text-dim: #a8927e;
+  --accent: #e39268;
   --accent-ink: #ffffff;
-  --accent-2: #3e5c48;
-  --ring: #ebd9c9;
-  --success: #4f7d5c;
-  --danger: #c1594a;
+  --accent-2: #77937c;
+  --ring: #f1e3d4;
+  --success: #74a97e;
+  --danger: #d5806a;
 }
 @media (prefers-color-scheme: dark) {
   [data-palette="peach-pine"] {
-    --bg: #221b16;
-    --surface: #2b221c;
-    --surface-2: #362a22;
-    --text: #f3e6da;
-    --text-dim: #ad9683;
-    --accent: #e79872;
-    --accent-ink: #221b16;
-    --accent-2: #85a98f;
-    --ring: #443628;
-    --success: #8fc49e;
-    --danger: #e08874;
+    --bg: #23201c;
+    --surface: #2c2823;
+    --surface-2: #363029;
+    --text: #f1e6da;
+    --text-dim: #b7a392;
+    --accent: #e39d78;
+    --accent-ink: #23201c;
+    --accent-2: #92ac96;
+    --ring: #423b32;
+    --success: #93c49a;
+    --danger: #de9683;
   }
 }
 :root[data-theme="dark"][data-palette="peach-pine"] {
-  --bg: #221b16;
-  --surface: #2b221c;
-  --surface-2: #362a22;
-  --text: #f3e6da;
-  --text-dim: #ad9683;
-  --accent: #e79872;
-  --accent-ink: #221b16;
-  --accent-2: #85a98f;
-  --ring: #443628;
-  --success: #8fc49e;
-  --danger: #e08874;
+  --bg: #23201c;
+  --surface: #2c2823;
+  --surface-2: #363029;
+  --text: #f1e6da;
+  --text-dim: #b7a392;
+  --accent: #e39d78;
+  --accent-ink: #23201c;
+  --accent-2: #92ac96;
+  --ring: #423b32;
+  --success: #93c49a;
+  --danger: #de9683;
 }
 :root[data-theme="light"][data-palette="peach-pine"] {
-  --bg: #fbf1e9;
+  --bg: #fdf8f3;
   --surface: #ffffff;
-  --surface-2: #f3e1d4;
-  --text: #362b24;
-  --text-dim: #957e6c;
-  --accent: #dd8862;
+  --surface-2: #fbefe4;
+  --text: #4a3b32;
+  --text-dim: #a8927e;
+  --accent: #e39268;
   --accent-ink: #ffffff;
-  --accent-2: #3e5c48;
-  --ring: #ebd9c9;
-  --success: #4f7d5c;
-  --danger: #c1594a;
+  --accent-2: #77937c;
+  --ring: #f1e3d4;
+  --success: #74a97e;
+  --danger: #d5806a;
 }
 
 /* ---------- Dawn Coral ---------- */
 [data-palette="dawn-coral"] {
-  --bg: #fbf3ea;
+  --bg: #fdf7f1;
   --surface: #ffffff;
-  --surface-2: #fff1e4;
-  --text: #3e2e28;
-  --text-dim: #8a776d;
-  --accent: #ff8b66;
+  --surface-2: #fceee1;
+  --text: #4a3a2f;
+  --text-dim: #ac9781;
+  --accent: #ff9e79;
   --accent-ink: #ffffff;
-  --accent-2: #d68a3f;
-  --ring: #f0dfcf;
-  --success: #6f9e5f;
-  --danger: #d1543c;
+  --accent-2: #e7a85e;
+  --ring: #f5e6d4;
+  --success: #83b073;
+  --danger: #e17a61;
 }
 @media (prefers-color-scheme: dark) {
   [data-palette="dawn-coral"] {
-    --bg: #241c18;
-    --surface: #2e2420;
-    --surface-2: #3a2e27;
-    --text: #f5e9df;
-    --text-dim: #c4afa0;
-    --accent: #ff9b76;
-    --accent-ink: #241c18;
-    --accent-2: #e6ab63;
-    --ring: #4a3b32;
-    --success: #9cd6b4;
-    --danger: #e58768;
+    --bg: #262019;
+    --surface: #2f2820;
+    --surface-2: #3a3126;
+    --text: #f6e9da;
+    --text-dim: #c7af98;
+    --accent: #ffab86;
+    --accent-ink: #262019;
+    --accent-2: #ebb975;
+    --ring: #473c2e;
+    --success: #a6d194;
+    --danger: #e99c85;
   }
 }
 :root[data-theme="dark"][data-palette="dawn-coral"] {
-  --bg: #241c18;
-  --surface: #2e2420;
-  --surface-2: #3a2e27;
-  --text: #f5e9df;
-  --text-dim: #c4afa0;
-  --accent: #ff9b76;
-  --accent-ink: #241c18;
-  --accent-2: #e6ab63;
-  --ring: #4a3b32;
-  --success: #9cd6b4;
-  --danger: #e58768;
+  --bg: #262019;
+  --surface: #2f2820;
+  --surface-2: #3a3126;
+  --text: #f6e9da;
+  --text-dim: #c7af98;
+  --accent: #ffab86;
+  --accent-ink: #262019;
+  --accent-2: #ebb975;
+  --ring: #473c2e;
+  --success: #a6d194;
+  --danger: #e99c85;
 }
 :root[data-theme="light"][data-palette="dawn-coral"] {
-  --bg: #fbf3ea;
+  --bg: #fdf7f1;
   --surface: #ffffff;
-  --surface-2: #fff1e4;
-  --text: #3e2e28;
-  --text-dim: #8a776d;
-  --accent: #ff8b66;
+  --surface-2: #fceee1;
+  --text: #4a3a2f;
+  --text-dim: #ac9781;
+  --accent: #ff9e79;
   --accent-ink: #ffffff;
-  --accent-2: #d68a3f;
-  --ring: #f0dfcf;
-  --success: #6f9e5f;
-  --danger: #d1543c;
+  --accent-2: #e7a85e;
+  --ring: #f5e6d4;
+  --success: #83b073;
+  --danger: #e17a61;
 }
 
 /* ---------- Harbor Teal ---------- */
 [data-palette="harbor-teal"] {
-  --bg: #f7f3ea;
+  --bg: #faf8f2;
   --surface: #ffffff;
-  --surface-2: #edf4f1;
-  --text: #263434;
-  --text-dim: #6e8482;
-  --accent: #4fb8ae;
+  --surface-2: #f0f7f3;
+  --text: #37453f;
+  --text-dim: #93a69c;
+  --accent: #63c7bc;
   --accent-ink: #ffffff;
-  --accent-2: #d18a44;
-  --ring: #dce7e2;
-  --success: #5c9a6d;
-  --danger: #c15f4e;
+  --accent-2: #e3a768;
+  --ring: #e6efe9;
+  --success: #77b884;
+  --danger: #db8267;
 }
 @media (prefers-color-scheme: dark) {
   [data-palette="harbor-teal"] {
-    --bg: #16211f;
-    --surface: #1d2b29;
-    --surface-2: #223734;
-    --text: #e7f1ee;
-    --text-dim: #a9bfbb;
-    --accent: #5fcfc4;
-    --accent-ink: #16211f;
-    --accent-2: #e6ab6c;
-    --ring: #2c4441;
-    --success: #8fd1a0;
-    --danger: #dc8a76;
+    --bg: #182420;
+    --surface: #1f2d28;
+    --surface-2: #263a33;
+    --text: #e9f3ee;
+    --text-dim: #abc2b9;
+    --accent: #6fd3c7;
+    --accent-ink: #182420;
+    --accent-2: #edbb7e;
+    --ring: #304842;
+    --success: #9bdbaa;
+    --danger: #e4967f;
   }
 }
 :root[data-theme="dark"][data-palette="harbor-teal"] {
-  --bg: #16211f;
-  --surface: #1d2b29;
-  --surface-2: #223734;
-  --text: #e7f1ee;
-  --text-dim: #a9bfbb;
-  --accent: #5fcfc4;
-  --accent-ink: #16211f;
-  --accent-2: #e6ab6c;
-  --ring: #2c4441;
-  --success: #8fd1a0;
-  --danger: #dc8a76;
+  --bg: #182420;
+  --surface: #1f2d28;
+  --surface-2: #263a33;
+  --text: #e9f3ee;
+  --text-dim: #abc2b9;
+  --accent: #6fd3c7;
+  --accent-ink: #182420;
+  --accent-2: #edbb7e;
+  --ring: #304842;
+  --success: #9bdbaa;
+  --danger: #e4967f;
 }
 :root[data-theme="light"][data-palette="harbor-teal"] {
-  --bg: #f7f3ea;
+  --bg: #faf8f2;
   --surface: #ffffff;
-  --surface-2: #edf4f1;
-  --text: #263434;
-  --text-dim: #6e8482;
-  --accent: #4fb8ae;
+  --surface-2: #f0f7f3;
+  --text: #37453f;
+  --text-dim: #93a69c;
+  --accent: #63c7bc;
   --accent-ink: #ffffff;
-  --accent-2: #d18a44;
-  --ring: #dce7e2;
-  --success: #5c9a6d;
-  --danger: #c15f4e;
+  --accent-2: #e3a768;
+  --ring: #e6efe9;
+  --success: #77b884;
+  --danger: #db8267;
 }
 
 /* ---------- Soft Sunset ---------- */
 [data-palette="soft-sunset"] {
-  --bg: #fbf5f6;
+  --bg: #fdf8f9;
   --surface: #ffffff;
-  --surface-2: #f6ecf3;
-  --text: #453a4a;
-  --text-dim: #8d7f92;
-  --accent: #f291a0;
+  --surface-2: #faf0f4;
+  --text: #4a3f4b;
+  --text-dim: #a996aa;
+  --accent: #f7adb8;
   --accent-ink: #ffffff;
-  --accent-2: #8672c9;
-  --ring: #efe0e8;
-  --success: #5e9d6f;
-  --danger: #cc5f6d;
+  --accent-2: #a38fdd;
+  --ring: #f3e6ec;
+  --success: #7eb58b;
+  --danger: #dd8791;
 }
 @media (prefers-color-scheme: dark) {
   [data-palette="soft-sunset"] {
-    --bg: #241e27;
-    --surface: #2c2530;
-    --surface-2: #34293a;
-    --text: #f3e8ef;
-    --text-dim: #bfa9c4;
-    --accent: #f5a3b1;
-    --accent-ink: #241e27;
-    --accent-2: #b2a0e8;
-    --ring: #453a4c;
-    --success: #a3d8b4;
-    --danger: #e3899a;
+    --bg: #251f27;
+    --surface: #2d2630;
+    --surface-2: #362d3a;
+    --text: #f5eaf0;
+    --text-dim: #c6b2c9;
+    --accent: #f8b2be;
+    --accent-ink: #251f27;
+    --accent-2: #bba9ec;
+    --ring: #473c4c;
+    --success: #abdbb8;
+    --danger: #e9a0a8;
   }
 }
 :root[data-theme="dark"][data-palette="soft-sunset"] {
-  --bg: #241e27;
-  --surface: #2c2530;
-  --surface-2: #34293a;
-  --text: #f3e8ef;
-  --text-dim: #bfa9c4;
-  --accent: #f5a3b1;
-  --accent-ink: #241e27;
-  --accent-2: #b2a0e8;
-  --ring: #453a4c;
-  --success: #a3d8b4;
-  --danger: #e3899a;
+  --bg: #251f27;
+  --surface: #2d2630;
+  --surface-2: #362d3a;
+  --text: #f5eaf0;
+  --text-dim: #c6b2c9;
+  --accent: #f8b2be;
+  --accent-ink: #251f27;
+  --accent-2: #bba9ec;
+  --ring: #473c4c;
+  --success: #abdbb8;
+  --danger: #e9a0a8;
 }
 :root[data-theme="light"][data-palette="soft-sunset"] {
-  --bg: #fbf5f6;
+  --bg: #fdf8f9;
   --surface: #ffffff;
-  --surface-2: #f6ecf3;
-  --text: #453a4a;
-  --text-dim: #8d7f92;
-  --accent: #f291a0;
+  --surface-2: #faf0f4;
+  --text: #4a3f4b;
+  --text-dim: #a996aa;
+  --accent: #f7adb8;
   --accent-ink: #ffffff;
-  --accent-2: #8672c9;
-  --ring: #efe0e8;
-  --success: #5e9d6f;
-  --danger: #cc5f6d;
-}
-
-/* ---------- Honey ---------- */
-[data-palette="honey"] {
-  --bg: #fff3dc;
-  --surface: #fffdf7;
-  --surface-2: #ffe3b0;
-  --text: #4a3116;
-  --text-dim: #a0824f;
-  --accent: #f2a93c;
-  --accent-ink: #4a3116;
-  --accent-2: #f0705a;
-  --ring: #fce2ae;
-  --success: #6f9d4f;
-  --danger: #dd6a4f;
-}
-@media (prefers-color-scheme: dark) {
-  [data-palette="honey"] {
-    --bg: #241c0f;
-    --surface: #2e2415;
-    --surface-2: #3a2d18;
-    --text: #f7e9cf;
-    --text-dim: #c7ab7c;
-    --accent: #f5bc5e;
-    --accent-ink: #241c0f;
-    --accent-2: #f28a74;
-    --ring: #4a3a20;
-    --success: #a3c97e;
-    --danger: #e58f79;
-  }
-}
-:root[data-theme="dark"][data-palette="honey"] {
-  --bg: #241c0f;
-  --surface: #2e2415;
-  --surface-2: #3a2d18;
-  --text: #f7e9cf;
-  --text-dim: #c7ab7c;
-  --accent: #f5bc5e;
-  --accent-ink: #241c0f;
-  --accent-2: #f28a74;
-  --ring: #4a3a20;
-  --success: #a3c97e;
-  --danger: #e58f79;
-}
-:root[data-theme="light"][data-palette="honey"] {
-  --bg: #fff3dc;
-  --surface: #fffdf7;
-  --surface-2: #ffe3b0;
-  --text: #4a3116;
-  --text-dim: #a0824f;
-  --accent: #f2a93c;
-  --accent-ink: #4a3116;
-  --accent-2: #f0705a;
-  --ring: #fce2ae;
-  --success: #6f9d4f;
-  --danger: #dd6a4f;
+  --accent-2: #a38fdd;
+  --ring: #f3e6ec;
+  --success: #7eb58b;
+  --danger: #dd8791;
 }
 
 * {
@@ -319,7 +269,7 @@ html {
     viewport widens, instead of a fixed-width mobile card just floating in
     empty space on a desktop screen.
   */
-  font-size: clamp(16px, 13px + 0.6vw, 22px);
+  font-size: clamp(17px, 13.5px + 0.65vw, 24px);
 }
 
 body {

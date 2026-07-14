@@ -11,11 +11,10 @@ import type { UiStrings } from "@/lib/i18n/strings";
 import styles from "./SettingsPanel.module.css";
 
 const PALETTE_PREVIEW: Record<PaletteId, [string, string, string]> = {
-  "peach-pine": ["#dd8862", "#3e5c48", "#f3e1d4"],
-  "dawn-coral": ["#ff8b66", "#d68a3f", "#fff1e4"],
-  "harbor-teal": ["#4fb8ae", "#d18a44", "#edf4f1"],
-  "soft-sunset": ["#f291a0", "#8672c9", "#f6ecf3"],
-  honey: ["#f2a93c", "#f0705a", "#ffe3b0"],
+  "peach-pine": ["#e39268", "#77937c", "#fbefe4"],
+  "dawn-coral": ["#ff9e79", "#e7a85e", "#fceee1"],
+  "harbor-teal": ["#63c7bc", "#e3a768", "#f0f7f3"],
+  "soft-sunset": ["#f7adb8", "#a38fdd", "#faf0f4"],
 };
 
 interface SettingsPanelProps {

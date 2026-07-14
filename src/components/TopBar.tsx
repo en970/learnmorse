@@ -7,16 +7,20 @@ interface TopBarProps {
   streakDays: number;
   strings: UiStrings;
   onOpenReview: () => void;
+  onOpenSpeedTest: () => void;
   onOpenSettings: () => void;
   reviewLabel: string;
+  speedTestLabel: string;
 }
 
 export function TopBar({
   streakDays,
   strings,
   onOpenReview,
+  onOpenSpeedTest,
   onOpenSettings,
   reviewLabel,
+  speedTestLabel,
 }: TopBarProps) {
   const lit = Math.min(streakDays, 5);
 
@@ -34,6 +38,19 @@ export function TopBar({
       <div className={styles.actions}>
         <button type="button" className={styles.textButton} onClick={onOpenReview}>
           {reviewLabel}
+        </button>
+        <button
+          type="button"
+          className={styles.iconButton}
+          onClick={onOpenSpeedTest}
+          aria-label={speedTestLabel}
+        >
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="13" r="8" />
+            <path d="M12 9v4l3 2" />
+            <path d="M9 2h6" />
+            <path d="M12 2v3" />
+          </svg>
         </button>
         <button
           type="button"

@@ -43,6 +43,18 @@ export interface UiStrings {
     finished: string;
     playAgain: string;
   };
+  speedTest: {
+    title: string;
+    subtitle: string;
+    start: string;
+    empty: string;
+    exit: string;
+    timeLeft: (seconds: number) => string;
+    finished: string;
+    wpmUnit: string;
+    accuracyUnit: string;
+    playAgain: string;
+  };
   progress: {
     lettersLearned: (learned: number, total: number) => string;
     complete: string;
@@ -94,6 +106,18 @@ export const STRINGS: Record<LanguageId, UiStrings> = {
       finished: "Nicely done.",
       playAgain: "Review again",
     },
+    speedTest: {
+      title: "Speed test",
+      subtitle: "One minute on the clock — see how many letters you can tap out.",
+      start: "Start",
+      empty: "Learn a few more letters first, then come back to test your speed.",
+      exit: "Exit speed test",
+      timeLeft: (seconds) => `${seconds}s`,
+      finished: "Time's up.",
+      wpmUnit: "WPM",
+      accuracyUnit: "accuracy",
+      playAgain: "Try again",
+    },
     progress: {
       lettersLearned: (learned, total) => `${learned} of ${total} letters`,
       complete: "Full alphabet learned",
@@ -103,7 +127,6 @@ export const STRINGS: Record<LanguageId, UiStrings> = {
       "dawn-coral": "Dawn Coral",
       "harbor-teal": "Harbor Teal",
       "soft-sunset": "Soft Sunset",
-      honey: "Honey",
     },
   },
   tr: {
@@ -149,6 +172,18 @@ export const STRINGS: Record<LanguageId, UiStrings> = {
       finished: "Güzel gitti.",
       playAgain: "Tekrar et",
     },
+    speedTest: {
+      title: "Hız testi",
+      subtitle: "Bir dakikan var — kaç harf yazabildiğine bak.",
+      start: "Başla",
+      empty: "Önce birkaç harf daha öğren, sonra hızını buradan test et.",
+      exit: "Hız testinden çık",
+      timeLeft: (seconds) => `${seconds}sn`,
+      finished: "Süre doldu.",
+      wpmUnit: "kelime/dk",
+      accuracyUnit: "doğruluk",
+      playAgain: "Tekrar dene",
+    },
     progress: {
       lettersLearned: (learned, total) => `${total} harften ${learned} tanesi`,
       complete: "Tüm alfabe öğrenildi",
@@ -158,7 +193,6 @@ export const STRINGS: Record<LanguageId, UiStrings> = {
       "dawn-coral": "Şafak Mercanı",
       "harbor-teal": "Liman Turkuazı",
       "soft-sunset": "Yumuşak Gün Batımı",
-      honey: "Bal",
     },
   },
 };

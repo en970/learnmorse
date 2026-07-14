@@ -26,7 +26,7 @@
 }
 
 .cell {
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--text-dim);
   opacity: 0.35;
@@ -71,7 +71,7 @@
 }
 
 .cell.next {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   opacity: 0.28;
 }
 
@@ -126,9 +126,9 @@
     padding: 3.25rem 1.5rem 2.5rem;
   }
   .cell {
-    font-size: 1.6rem;
+    font-size: 1.85rem;
   }
   .cell.next {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }

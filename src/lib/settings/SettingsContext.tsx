@@ -15,15 +15,13 @@ export type PaletteId =
   | "peach-pine"
   | "dawn-coral"
   | "harbor-teal"
-  | "soft-sunset"
-  | "honey";
+  | "soft-sunset";
 
 export const PALETTE_IDS: PaletteId[] = [
   "peach-pine",
   "dawn-coral",
   "harbor-teal",
   "soft-sunset",
-  "honey",
 ];
 
 interface Settings {
@@ -62,6 +60,15 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   );
 
   useEffect(() => {
+    // A palette from an older version of the app (e.g. the since-retired
+    // "honey" option) might still be sitting in someone's localStorage —
+    // fall back to the default rather than rendering with no matching
+    // tokens at all.
+    if (!PALETTE_IDS.includes(settings.palette)) {
+      setSettings((s) => ({ ...s, palette: DEFAULT_SETTINGS.palette }));
+      return;
+    }
+
     const root = document.documentElement;
     root.setAttribute("data-palette", settings.palette);
     root.lang = settings.language;
@@ -70,7 +77,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     } else {
       root.setAttribute("data-theme", settings.theme);
     }
-  }, [settings.palette, settings.language, settings.theme]);
+  }, [settings.palette, settings.language, settings.theme, setSettings]);
 
   const value = useMemo<SettingsContextValue>(
     () => ({
