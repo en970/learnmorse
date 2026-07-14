@@ -96,68 +96,70 @@ export function ReviewMode({
 
   return (
     <div className={styles.overlay}>
-      <div className={styles.header}>
-        <span className={styles.title}>{strings.review.title}</span>
-        <button
-          type="button"
-          className={styles.exit}
-          onClick={onExit}
-          aria-label={strings.review.exit}
-        >
-          &#10005;
-        </button>
-      </div>
-
-      {phase === "intro" && (
-        <div className={styles.intro}>
-          <p>
-            {letters.length > 0
-              ? strings.review.subtitle
-              : strings.review.empty}
-          </p>
-          {letters.length > 0 && (
-            <button type="button" className={styles.primaryButton} onClick={start}>
-              {strings.review.start}
-            </button>
-          )}
-        </div>
-      )}
-
-      {phase === "playing" && (
-        <>
-          <div className={styles.score}>{scoreLabel}</div>
-          <div className={styles.body}>
-            <div className={styles.letter}>{currentLetter.toUpperCase()}</div>
-            <div className={styles.buffer}>
-              {[...input.buffer].map((symbol, i) =>
-                symbol === "-" ? (
-                  <span key={i} className={styles.bufferDash} />
-                ) : (
-                  <span key={i} className={styles.bufferDot} />
-                ),
-              )}
-            </div>
-            <div
-              className={[styles.feedback, feedback ? styles[feedback] : ""].join(" ")}
-            >
-              {feedback === "correct" ? "✓" : feedback === "incorrect" ? currentPattern : ""}
-            </div>
-          </div>
-          <div className={styles.controls}>
-            <ControlKeys input={input} singleSwitch={singleSwitch} strings={strings} />
-          </div>
-        </>
-      )}
-
-      {phase === "done" && (
-        <div className={styles.done}>
-          <p>{strings.review.finished}</p>
-          <div className={styles.doneScore}>{scoreLabel}</div>
-          <button type="button" className={styles.primaryButton} onClick={start}>
-            {strings.review.playAgain}
+      <div className={styles.column}>
+        <div className={styles.header}>
+          <span className={styles.title}>{strings.review.title}</span>
+          <button
+            type="button"
+            className={styles.exit}
+            onClick={onExit}
+            aria-label={strings.review.exit}
+          >
+            &#10005;
           </button>
         </div>
-      )}
+
+        {phase === "intro" && (
+          <div className={styles.intro}>
+            <p>
+              {letters.length > 0
+                ? strings.review.subtitle
+                : strings.review.empty}
+            </p>
+            {letters.length > 0 && (
+              <button type="button" className={styles.primaryButton} onClick={start}>
+                {strings.review.start}
+              </button>
+            )}
+          </div>
+        )}
+
+        {phase === "playing" && (
+          <>
+            <div className={styles.score}>{scoreLabel}</div>
+            <div className={styles.body}>
+              <div className={styles.letter}>{currentLetter.toUpperCase()}</div>
+              <div className={styles.buffer}>
+                {[...input.buffer].map((symbol, i) =>
+                  symbol === "-" ? (
+                    <span key={i} className={styles.bufferDash} />
+                  ) : (
+                    <span key={i} className={styles.bufferDot} />
+                  ),
+                )}
+              </div>
+              <div
+                className={[styles.feedback, feedback ? styles[feedback] : ""].join(" ")}
+              >
+                {feedback === "correct" ? "✓" : feedback === "incorrect" ? currentPattern : ""}
+              </div>
+            </div>
+            <div className={styles.controls}>
+              <ControlKeys input={input} singleSwitch={singleSwitch} strings={strings} />
+            </div>
+          </>
+        )}
+
+        {phase === "done" && (
+          <div className={styles.done}>
+            <p>{strings.review.finished}</p>
+            <div className={styles.doneScore}>{scoreLabel}</div>
+            <button type="button" className={styles.primaryButton} onClick={start}>
+              {strings.review.playAgain}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -313,6 +313,13 @@ body {
 html {
   background: var(--bg);
   color-scheme: light dark;
+  /*
+    Everything below is sized in rem, so scaling the root font makes the
+    whole app — type, spacing, buttons, the works — grow together as the
+    viewport widens, instead of a fixed-width mobile card just floating in
+    empty space on a desktop screen.
+  */
+  font-size: clamp(16px, 13px + 0.6vw, 22px);
 }
 
 body {

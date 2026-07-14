@@ -1,12 +1,12 @@
 .track {
   display: flex;
-  gap: 3px;
+  gap: 0.1875rem;
   width: 100%;
 }
 
 .segment {
   flex: 1;
-  height: 3px;
+  height: 0.1875rem;
   border-radius: 2px;
   background: var(--ring);
 }
