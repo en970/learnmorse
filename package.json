@@ -1,0 +1,32 @@
+{
+  "name": "learnmorse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A calm way to learn Morse code, one letter at a time, in English or Turkish.",
+  "homepage": "https://oze05607.github.io/learnmorse/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oze05607/learnmorse.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "validate:words": "node --experimental-strip-types scripts/validate-words.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "typescript": "^5"
+  }
+}

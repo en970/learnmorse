@@ -1,0 +1,267 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 14, 10, 0.35);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 40;
+  animation: fadeIn 0.25s var(--ease-out);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sheet {
+  width: 100%;
+  max-width: 440px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: var(--bg);
+  border-radius: 26px 26px 0 0;
+  padding: 10px 22px 32px;
+  animation: slideUp 0.3s var(--ease-out);
+}
+
+@media (min-width: 560px) {
+  .overlay {
+    align-items: center;
+  }
+  .sheet {
+    border-radius: 24px;
+    max-height: 82vh;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(24px);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.handle {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ring);
+  margin: 10px auto 6px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 18px;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.closeButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: var(--surface-2);
+  color: var(--text-dim);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.section {
+  padding: 18px 0;
+  border-top: 1px solid var(--ring);
+}
+
+.section:first-of-type {
+  border-top: none;
+}
+
+.sectionLabel {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.rowText .label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.rowText .sub {
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.seg {
+  display: flex;
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.seg button {
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.seg button.active {
+  background: var(--surface);
+  color: var(--accent-2);
+  box-shadow: 0 1px 0 var(--ring);
+}
+
+.switch {
+  width: 44px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--ring);
+  position: relative;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s var(--ease-out);
+}
+
+.switch.on {
+  background: var(--accent);
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: left 0.2s var(--ease-spring);
+}
+
+.switch.on::after {
+  left: 21px;
+}
+
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 10px;
+}
+
+.paletteOption {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 10px;
+  background: var(--surface-2);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.paletteOption.active {
+  border-color: var(--accent);
+}
+
+.paletteSwatches {
+  display: flex;
+  gap: 4px;
+}
+
+.paletteSwatches span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.paletteName {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.resetButton {
+  width: 100%;
+  padding: 13px;
+  border-radius: 14px;
+  border: 1px solid var(--ring);
+  background: transparent;
+  color: var(--danger);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.confirmRow {
+  display: flex;
+  gap: 8px;
+}
+
+.confirmRow button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.confirmDanger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.confirmCancel {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.warning {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}

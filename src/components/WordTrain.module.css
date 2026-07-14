@@ -1,0 +1,121 @@
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 40px 16px 32px;
+  border-top: 1px solid var(--ring);
+  border-bottom: 1px solid var(--ring);
+  width: 100%;
+}
+
+.train {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(10px, 3vw, 20px);
+  min-height: 90px;
+}
+
+.divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--ring);
+  margin: 0 2px;
+}
+
+.cell {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  opacity: 0.35;
+  line-height: 1;
+  transition: opacity 0.3s var(--ease-out), font-size 0.3s var(--ease-out),
+    color 0.3s var(--ease-out);
+}
+
+.cell.passed {
+  opacity: 0.55;
+  color: var(--accent-2);
+}
+
+.cell.active {
+  font-size: clamp(3rem, 12vw, 4.2rem);
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 1;
+}
+
+.cell.active.correct {
+  animation: pulse 0.4s var(--ease-spring);
+  color: var(--success);
+}
+
+.cell.active.incorrect {
+  animation: shake 0.35s var(--ease-out);
+  color: var(--danger);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.cell.next {
+  font-size: 1.1rem;
+  opacity: 0.28;
+}
+
+.pattern {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-2);
+}
+
+.dash {
+  width: 26px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--accent-2);
+}
+
+.buffer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 16px;
+  min-width: 40px;
+}
+
+.bufferDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  opacity: 0.55;
+}
+
+.bufferDash {
+  width: 20px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--text-dim);
+  opacity: 0.55;
+}

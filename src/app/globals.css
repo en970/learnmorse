@@ -1,0 +1,358 @@
+/*
+  Design tokens for every palette the app ships with.
+  Shape language: thin hairline rules, restrained radii, uppercase tracked
+  labels — the "Dusty Peach & Pine" direction the palette pitch settled on.
+  Each palette is a full light + dark pair, selected via [data-palette] on
+  <html> and toggled between light/dark via [data-theme] (falling back to
+  the OS preference when the user picks "auto", i.e. no [data-theme] set).
+*/
+
+:root {
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- Peach & Pine (default) ---------- */
+[data-palette="peach-pine"] {
+  --bg: #fbf1e9;
+  --surface: #ffffff;
+  --surface-2: #f3e1d4;
+  --text: #362b24;
+  --text-dim: #957e6c;
+  --accent: #dd8862;
+  --accent-ink: #ffffff;
+  --accent-2: #3e5c48;
+  --ring: #ebd9c9;
+  --success: #4f7d5c;
+  --danger: #c1594a;
+}
+@media (prefers-color-scheme: dark) {
+  [data-palette="peach-pine"] {
+    --bg: #221b16;
+    --surface: #2b221c;
+    --surface-2: #362a22;
+    --text: #f3e6da;
+    --text-dim: #ad9683;
+    --accent: #e79872;
+    --accent-ink: #221b16;
+    --accent-2: #85a98f;
+    --ring: #443628;
+    --success: #8fc49e;
+    --danger: #e08874;
+  }
+}
+:root[data-theme="dark"][data-palette="peach-pine"] {
+  --bg: #221b16;
+  --surface: #2b221c;
+  --surface-2: #362a22;
+  --text: #f3e6da;
+  --text-dim: #ad9683;
+  --accent: #e79872;
+  --accent-ink: #221b16;
+  --accent-2: #85a98f;
+  --ring: #443628;
+  --success: #8fc49e;
+  --danger: #e08874;
+}
+:root[data-theme="light"][data-palette="peach-pine"] {
+  --bg: #fbf1e9;
+  --surface: #ffffff;
+  --surface-2: #f3e1d4;
+  --text: #362b24;
+  --text-dim: #957e6c;
+  --accent: #dd8862;
+  --accent-ink: #ffffff;
+  --accent-2: #3e5c48;
+  --ring: #ebd9c9;
+  --success: #4f7d5c;
+  --danger: #c1594a;
+}
+
+/* ---------- Dawn Coral ---------- */
+[data-palette="dawn-coral"] {
+  --bg: #fbf3ea;
+  --surface: #ffffff;
+  --surface-2: #fff1e4;
+  --text: #3e2e28;
+  --text-dim: #8a776d;
+  --accent: #ff8b66;
+  --accent-ink: #ffffff;
+  --accent-2: #d68a3f;
+  --ring: #f0dfcf;
+  --success: #6f9e5f;
+  --danger: #d1543c;
+}
+@media (prefers-color-scheme: dark) {
+  [data-palette="dawn-coral"] {
+    --bg: #241c18;
+    --surface: #2e2420;
+    --surface-2: #3a2e27;
+    --text: #f5e9df;
+    --text-dim: #c4afa0;
+    --accent: #ff9b76;
+    --accent-ink: #241c18;
+    --accent-2: #e6ab63;
+    --ring: #4a3b32;
+    --success: #9cd6b4;
+    --danger: #e58768;
+  }
+}
+:root[data-theme="dark"][data-palette="dawn-coral"] {
+  --bg: #241c18;
+  --surface: #2e2420;
+  --surface-2: #3a2e27;
+  --text: #f5e9df;
+  --text-dim: #c4afa0;
+  --accent: #ff9b76;
+  --accent-ink: #241c18;
+  --accent-2: #e6ab63;
+  --ring: #4a3b32;
+  --success: #9cd6b4;
+  --danger: #e58768;
+}
+:root[data-theme="light"][data-palette="dawn-coral"] {
+  --bg: #fbf3ea;
+  --surface: #ffffff;
+  --surface-2: #fff1e4;
+  --text: #3e2e28;
+  --text-dim: #8a776d;
+  --accent: #ff8b66;
+  --accent-ink: #ffffff;
+  --accent-2: #d68a3f;
+  --ring: #f0dfcf;
+  --success: #6f9e5f;
+  --danger: #d1543c;
+}
+
+/* ---------- Harbor Teal ---------- */
+[data-palette="harbor-teal"] {
+  --bg: #f7f3ea;
+  --surface: #ffffff;
+  --surface-2: #edf4f1;
+  --text: #263434;
+  --text-dim: #6e8482;
+  --accent: #4fb8ae;
+  --accent-ink: #ffffff;
+  --accent-2: #d18a44;
+  --ring: #dce7e2;
+  --success: #5c9a6d;
+  --danger: #c15f4e;
+}
+@media (prefers-color-scheme: dark) {
+  [data-palette="harbor-teal"] {
+    --bg: #16211f;
+    --surface: #1d2b29;
+    --surface-2: #223734;
+    --text: #e7f1ee;
+    --text-dim: #a9bfbb;
+    --accent: #5fcfc4;
+    --accent-ink: #16211f;
+    --accent-2: #e6ab6c;
+    --ring: #2c4441;
+    --success: #8fd1a0;
+    --danger: #dc8a76;
+  }
+}
+:root[data-theme="dark"][data-palette="harbor-teal"] {
+  --bg: #16211f;
+  --surface: #1d2b29;
+  --surface-2: #223734;
+  --text: #e7f1ee;
+  --text-dim: #a9bfbb;
+  --accent: #5fcfc4;
+  --accent-ink: #16211f;
+  --accent-2: #e6ab6c;
+  --ring: #2c4441;
+  --success: #8fd1a0;
+  --danger: #dc8a76;
+}
+:root[data-theme="light"][data-palette="harbor-teal"] {
+  --bg: #f7f3ea;
+  --surface: #ffffff;
+  --surface-2: #edf4f1;
+  --text: #263434;
+  --text-dim: #6e8482;
+  --accent: #4fb8ae;
+  --accent-ink: #ffffff;
+  --accent-2: #d18a44;
+  --ring: #dce7e2;
+  --success: #5c9a6d;
+  --danger: #c15f4e;
+}
+
+/* ---------- Soft Sunset ---------- */
+[data-palette="soft-sunset"] {
+  --bg: #fbf5f6;
+  --surface: #ffffff;
+  --surface-2: #f6ecf3;
+  --text: #453a4a;
+  --text-dim: #8d7f92;
+  --accent: #f291a0;
+  --accent-ink: #ffffff;
+  --accent-2: #8672c9;
+  --ring: #efe0e8;
+  --success: #5e9d6f;
+  --danger: #cc5f6d;
+}
+@media (prefers-color-scheme: dark) {
+  [data-palette="soft-sunset"] {
+    --bg: #241e27;
+    --surface: #2c2530;
+    --surface-2: #34293a;
+    --text: #f3e8ef;
+    --text-dim: #bfa9c4;
+    --accent: #f5a3b1;
+    --accent-ink: #241e27;
+    --accent-2: #b2a0e8;
+    --ring: #453a4c;
+    --success: #a3d8b4;
+    --danger: #e3899a;
+  }
+}
+:root[data-theme="dark"][data-palette="soft-sunset"] {
+  --bg: #241e27;
+  --surface: #2c2530;
+  --surface-2: #34293a;
+  --text: #f3e8ef;
+  --text-dim: #bfa9c4;
+  --accent: #f5a3b1;
+  --accent-ink: #241e27;
+  --accent-2: #b2a0e8;
+  --ring: #453a4c;
+  --success: #a3d8b4;
+  --danger: #e3899a;
+}
+:root[data-theme="light"][data-palette="soft-sunset"] {
+  --bg: #fbf5f6;
+  --surface: #ffffff;
+  --surface-2: #f6ecf3;
+  --text: #453a4a;
+  --text-dim: #8d7f92;
+  --accent: #f291a0;
+  --accent-ink: #ffffff;
+  --accent-2: #8672c9;
+  --ring: #efe0e8;
+  --success: #5e9d6f;
+  --danger: #cc5f6d;
+}
+
+/* ---------- Honey ---------- */
+[data-palette="honey"] {
+  --bg: #fff3dc;
+  --surface: #fffdf7;
+  --surface-2: #ffe3b0;
+  --text: #4a3116;
+  --text-dim: #a0824f;
+  --accent: #f2a93c;
+  --accent-ink: #4a3116;
+  --accent-2: #f0705a;
+  --ring: #fce2ae;
+  --success: #6f9d4f;
+  --danger: #dd6a4f;
+}
+@media (prefers-color-scheme: dark) {
+  [data-palette="honey"] {
+    --bg: #241c0f;
+    --surface: #2e2415;
+    --surface-2: #3a2d18;
+    --text: #f7e9cf;
+    --text-dim: #c7ab7c;
+    --accent: #f5bc5e;
+    --accent-ink: #241c0f;
+    --accent-2: #f28a74;
+    --ring: #4a3a20;
+    --success: #a3c97e;
+    --danger: #e58f79;
+  }
+}
+:root[data-theme="dark"][data-palette="honey"] {
+  --bg: #241c0f;
+  --surface: #2e2415;
+  --surface-2: #3a2d18;
+  --text: #f7e9cf;
+  --text-dim: #c7ab7c;
+  --accent: #f5bc5e;
+  --accent-ink: #241c0f;
+  --accent-2: #f28a74;
+  --ring: #4a3a20;
+  --success: #a3c97e;
+  --danger: #e58f79;
+}
+:root[data-theme="light"][data-palette="honey"] {
+  --bg: #fff3dc;
+  --surface: #fffdf7;
+  --surface-2: #ffe3b0;
+  --text: #4a3116;
+  --text-dim: #a0824f;
+  --accent: #f2a93c;
+  --accent-ink: #4a3116;
+  --accent-2: #f0705a;
+  --ring: #fce2ae;
+  --success: #6f9d4f;
+  --danger: #dd6a4f;
+}
+
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  background: var(--bg);
+  color-scheme: light dark;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+  transition: background 0.35s var(--ease-out), color 0.35s var(--ease-out);
+}
+
+button,
+input {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
